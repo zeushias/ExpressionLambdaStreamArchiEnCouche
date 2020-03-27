@@ -7,7 +7,10 @@ package presentation;
 import java.util.List;
 import java.util.Scanner;
 import dao.Dao;
+import dao.INombreEtudiant;
+import dao.NombreEtudiantDao;
 import metier.Etudiant;
+import service.NombreEtudiantService;
 
 /**
  * Class main pour lancer notre application de gestion de l'école
@@ -51,7 +54,8 @@ public class Lanceur {
 			// lister les étudiants
 			System.out.println();
 			System.out.println("Nombre de personne");
-			Dao.lireEtudiant();
+			NombreEtudiantDao nombreEtudiantDao = new NombreEtudiantDao();
+			nombreEtudiantDao.nombreEtudiant();
 			//affichage();
 			break;
 		default:
